@@ -31,10 +31,14 @@ public class HomeController {
 		return "public:common/content.tiles";
 	}
 	@RequestMapping("/move/{prefix}/{dir}/{page}")
+	
 	public String move(
 			@PathVariable String prefix,
 			@PathVariable String dir,
 			@PathVariable String page) {
+		System.out.println("prefix : "+prefix);
+		System.out.println("dir : "+dir);
+		System.out.println("page : "+page);
 		logger.info("\n --------- HomeController {} !!--------","move()");
 		String path = prefix+":"+dir+"/"+page+".tiles";
 		logger.info("\n move page >>> {}",path);

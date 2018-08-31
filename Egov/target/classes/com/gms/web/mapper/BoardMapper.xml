@@ -17,6 +17,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  from 
    tbl_board 
  where bno = #{bno}
+ 
+ </select>
+ <select id="selectSome" resultType="com.gms.web.domain.ArticleDTO">
+ select 
+   bno, title, content, writer, regdate, viewcnt 
+ from 
+   tbl_board 
+ where bno = #{bno}
+ </select>
+
+<select id="selectList" resultType="com.gms.web.domain.ArticleDTO">
+ select 
+   bno, title, content, writer, regdate, viewcnt 
+ from 
+   tbl_board 
+ where bno = #{bno}
  </select>
 
  <update id="update">
@@ -28,7 +44,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  delete from tbl_board where bno = #{bno}
  </delete>
 
- <select id="selectList" resultType="com.gms.web.domain.ArticleDTO">
+ <select id="listSearch" resultType="com.gms.web.domain.ArticleDTO">
  <![CDATA[
  select 
    bno, title, content, writer, regdate, viewcnt 
@@ -120,7 +136,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 ]]>  
 </select>
   
-<select id="listSearchCount" resultType="int">
+<!-- <select id="listSearchCount" resultType="int">
 <![CDATA[  
   select count(bno) 
   from tbl_board 
@@ -128,6 +144,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 ]]>
   <include refid="search"></include>
  
-</select>  
+</select>  --> 
   
 </mapper>

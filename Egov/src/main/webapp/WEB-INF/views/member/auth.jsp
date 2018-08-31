@@ -59,7 +59,8 @@
 	});
 	$('#board_write').click(function(){
 		alert('board_write');
-		/* location.href = "${context}/board/add"; */
+
+		 location.href = "${context}/board/add"; 
 	});
 
 	$('#board_list').click(function(){

@@ -48,15 +48,15 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void remove(Map<?, ?> p) {
+	public void modify(ArticleDTO article) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void modify(ArticleDTO article) {
+	public boolean remove(ArticleDTO p) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 }

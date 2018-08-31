@@ -31,6 +31,7 @@ public class BoardController {
 	
 	@RequestMapping("/add")
 	public void add(@ModelAttribute ArticleDTO article){
+
 		System.out.println("==/BoardController add/==");
 		boardservice.add(article);
 	}
