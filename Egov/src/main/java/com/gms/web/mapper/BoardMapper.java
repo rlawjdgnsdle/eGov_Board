@@ -11,9 +11,10 @@ import com.gms.web.domain.MemberDTO;
 @Repository
 public interface BoardMapper {
 	public void add(ArticleDTO p);
-	public List<?> selectList(Map<?,?>p);
-	public List<?> selectSome(Map<?,?>p);
 	public ArticleDTO selectOne(Map<?, ?> p);
+	public List<?> selectSome(Map<?,?>p);
+	public List<?> selectList(Map<?,?>p);
+	
 	public int count(Map<?,?>p);
 	public void update(ArticleDTO p);
 	public void delete(ArticleDTO p);

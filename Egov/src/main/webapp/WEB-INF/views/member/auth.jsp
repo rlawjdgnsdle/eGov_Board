@@ -44,7 +44,7 @@
           </a>
           <ul class="dropdown-menu" role="menu">
             <li><a id="logout_btn" href="#">로그아웃</a></li>
-            <li><a id="mypage" href="#">마이페이지</a></li>
+            <li><a id="modify_button" href="#">마이페이지</a></li>
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
           </ul>
@@ -54,16 +54,35 @@
   </div><!-- /.container-fluid -->
 </nav>
 <script>
-	user.session({
-		memid : '${member.memid}'
-	});
-	$('#board_write').click(function(){
-		alert('board_write');
 
-		 location.href = "${context}/board/add"; 
-	});
 
-	$('#board_list').click(function(){
-		alert('board_list');
-		});	
+
+user.session({
+	memid : '${member.memid}'
+});
+$('#board_write').click(function(){
+	alert('board_write');
+	
+});
+
+$('#board_list').click(function(){
+	alert('board_list');
+	});	
+
+$('#modify_button').click(function(){
+	alert('modify click');
+	$('#updateForm')
+	.attr({
+		action:"${context}/member/modify",
+		method:"POST"
+	}).submit();
+	
+location.href = "${context}/member/modify"; 
+
+/* 	$('updateForm')
+	.attr({
+		action:"${context}/move/member/modify",
+		method:"POST"
+	}).submit(); */
+});
 </script>

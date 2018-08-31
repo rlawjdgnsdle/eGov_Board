@@ -8,19 +8,19 @@
 			</td>
 			
 			<td>아이디</td>
-			<td colspan="2">${member.memid}</td>
+			<td colspan="2">${user.memid}</td>
 		</tr>
 		<tr>
 			<td>이름</td>
-			<td colspan="2">${member.memname}</td>
+			<td colspan="2">${user.memname}</td>
 		</tr>
 		<tr>
 			<td><a id="moveUpdateForm">비밀번호</a></td>
-			<td colspan="2"><input type="text" name="newPass" placeholder="${member.pass}"/></td>
+			<td colspan="2"><input type="text" name="pass" placeholder="${user.pass}"/></td>
 		</tr>
 		<tr>
 			<td>나이</td>
-			<td>${member.age}</td>
+			<td>${user.age}</td>
 			<td><a id="moveUpdateTeamForm">팀명</a></td>
 			<td>
 				<input type="radio" name="teamid" id="ateam"
@@ -35,7 +35,7 @@
 		</tr>
 		<tr>
 		<td>성별</td>
-		<td>${member.gender}</td>
+		<td>${user.gender}</td>
 		<td><a id="moveUpdateRollForm">역활</a></td>
 		<td>
 			<select name="roll" id="roll">
@@ -56,3 +56,11 @@
 
   <input type="submit" value="파일업로드">
 </form>
+<script>
+/* $('#updateBtn').click(function(){
+	$('#updateForm')
+		.attr({ action : "${context}/member/modify",
+				method : "POST"})
+		.submit();
+}); */
+</script>

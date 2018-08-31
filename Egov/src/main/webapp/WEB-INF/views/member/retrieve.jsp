@@ -2,14 +2,13 @@
 <div id="content-box">
 	<table>
 		<tr>
-			
 			<td rowspan="3"><img id="profile" src="${img}${profile}" /></td>
 			<td>아이디</td>
-			<td colspan="2">${member.memberId}</td>
+			<td colspan="2">${user.memid}</td>
 		</tr>
 		<tr>
 			<td>이름</td>
-			<td colspan="2">${member.name}</td>
+			<td colspan="2">${user.memname}</td>
 		</tr>
 		<tr>
 			<td><a>비밀번호</a></td>
@@ -17,15 +16,15 @@
 		</tr>
 		<tr>
 			<td>나이</td>
-			<td>${member.age}</td>
+			<td>${user.age}</td>
 			<td><a>팀명</a></td>
-			<td>${member.teamId}</td>
+			<td>${user.teamid}</td>
 		</tr>
 		<tr>
 		<td>성별</td>
-		<td>${member.gender}</td>
+		<td>${user.gender}</td>
 		<td><a>역활</a></td>
-		<td>${member.roll}</td>
+		<td>${user.roll}</td>
 		</tr>
 	</table>
 			${img}
@@ -35,4 +34,7 @@
 		<a id="moveDeleteForm">회원탈퇴</a> &nbsp; &nbsp;
 		<a id="logOut">로그아웃</a>
 </div>
+<script>
 
+
+</script>

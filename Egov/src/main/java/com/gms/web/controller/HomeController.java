@@ -42,7 +42,7 @@ public class HomeController {
 		logger.info("\n --------- HomeController {} !!--------","move()");
 		String path = prefix+":"+dir+"/"+page+".tiles";
 		logger.info("\n move page >>> {}",path);
-		return path;
+		return path;// auth:member/modify.tiles
 	}
 	
 }

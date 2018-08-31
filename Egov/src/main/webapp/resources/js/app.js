@@ -12,23 +12,57 @@ app = {
 			console.log('step 3');
 			app.setContentView();
 			$('#login_btn').click(()=>{ //로그인버튼
-				alert('login');
 				location.href = app.x()+'/move/auth/member/login';
 			}); 
-			$('#login_submit').click(()=>{ // 제출버튼
-				location.href = app.x()+'/member/login/'
-				+document.loginForm.memid.value+'/'
-				+document.loginForm.pass.value;
-			}); 
+			
 			$('#mypage').click(()=>{
 				alert('mypage button');
 				location.href = app.x()+"/member/modify";
+			});	
 				
+			$('#login_submit').click(()=>{ // 제출버튼
+					alert('login_submit');
+					$('#loginForm')
+					.attr({
+						action:app.x()+'/member/login',
+						method:"POST"
+					}).submit();
+				});
+			
+			$('#updateBtn').click(()=>{
+				alert('moveUpdateForm!');
+				$('#updateForm')
+					.attr({
+						action:app.x()+'/member/modify',
+						method:"POST"
+				}).submit();
+			});
+			
+			$('#moveUpdateForm').click(()=>{
+				alert('moveUpdateForm');
+				location.href = app.x()+'/move/auth/member/modify';
+			});
+			$('#moveDeleteForm').click(()=>{
+				location.href= app.x()+'/move/auth/member/remove';
+			});
+			$('#deleteBtn').click(()=>{
+				$('#deleteForm')
+				.attr({
+					action: app.x()+'/member/remove',
+					method:"POST"
+			}).submit();
 			});	
 			$('#join_btn').click(()=>{
 				location.href = app.x()+"/move/auth/member/add";
 			});	
-				
+			/*$('#moveUpdateForm').click(function(){
+				alert('modify click');
+				$('#updateForm')
+				.attr({
+					action:app.x()+"member/update",
+					method:"POST"
+				}).submit();
+			});*/
 			$('#joinBth').click(()=>{
 				alert('joinBth click');
 				$('#joinForm')
@@ -37,7 +71,7 @@ app = {
 					method:"POST"
 				}).submit();
 				
-			
+		
 				/*
 				$('modify_Button')
 				$('modify_Submit')*/

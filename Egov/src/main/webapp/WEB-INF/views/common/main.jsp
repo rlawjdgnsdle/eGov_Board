@@ -26,13 +26,11 @@
 	<div id="content">
 		<tiles:insertAttribute name="content"/>
 	</div> 
-	<%-- <div id="footer">
-		<tiles:insertAttribute name="footer"/>
-	</div>  --%>
+	
 </div>
 <script>
 app.init('${context}');
 </script>
-</body>
+</body>	
 </html>
 

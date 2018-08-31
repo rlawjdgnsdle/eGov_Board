@@ -24,9 +24,9 @@
 		</tr>
 		<c:forEach items="${list}" var="member" >
 		<tr>
-			<td>${member.memberId}</td>
+			<td>${member.memid}</td>
 			<td>
-				<a class="username" id="${member.memberId}">
+				<a class="username" id="${member.memid}">
 					${member.name}
 				</a>
 			</td>

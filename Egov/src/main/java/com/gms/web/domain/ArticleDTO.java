@@ -9,5 +9,10 @@ import lombok.Data;
 @Data
 @Lazy // 게으르다… 설거지를 미우고 미뤄둔다… @Lazy를 걸어버리면… 
 public class ArticleDTO {
-	private String bno, title, content, writer, regdate, viewcnt;
+	 private String bno,
+					title,
+					content,
+					writer,
+					regdate,
+					viewcnt;
 }

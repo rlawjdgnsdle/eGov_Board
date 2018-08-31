@@ -94,7 +94,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 
 
-<sql id="search">
+<!-- <sql id="search">
  <if test="searchType != null" > 
    <if test="searchType == 't'.toString()">
      and title like CONCAT('%', #{keyword}, '%')
@@ -119,23 +119,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
              writer like CONCAT('%', #{keyword}, '%'))
    </if>              
  </if>  
-</sql>
+</sql> -->
  
-<select id="listSearch" resultType="com.gms.web.domain.ArticleDTO">
+<!--  <select id="listSearch" resultType="com.gms.web.domain.ArticleDTO">
 <![CDATA[  
   select * 
   from tbl_board 
   where bno > 0 
 ]]>  
 
-  <include refid="search"></include>
-  
+ 
 <![CDATA[    
   order by bno desc
   limit #{pageStart}, #{perPageNum}
 ]]>  
 </select>
-  
+   -->
 <!-- <select id="listSearchCount" resultType="int">
 <![CDATA[  
   select count(bno) 
